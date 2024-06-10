@@ -1,0 +1,20 @@
+﻿<Window x:Class="WWTBM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WWTBM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="660" Width="1100"
+        MinHeight="600"
+        MinWidth="1000"
+        Background="#091461"
+        >
+
+
+    <Grid>
+        <ContentControl Content="{Binding CurrentContent}" />
+    </Grid>
+
+    
+</Window>

@@ -1,0 +1,293 @@
+﻿<UserControl x:Class="WWTBM.Screens.GameView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WWTBM.Screens"
+             mc:Ignorable="d" 
+             x:Name="UserControllGame"
+             d:DesignHeight="450" d:DesignWidth="800"
+             Focusable="True"
+             PreviewKeyDown="UserControl_KeyDown"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../SharedStyles/SharedStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*" ></RowDefinition>
+
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+
+            <RowDefinition Height="40*"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+            <ColumnDefinition Width="30*"></ColumnDefinition>
+            <ColumnDefinition Width="30*"></ColumnDefinition>
+            <ColumnDefinition Width="20*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <Button Grid.Row="0" Content="Menù" Height="30" 
+                    Style="{StaticResource ButtonWithGlowStyle}"
+                    Width="{Binding ActualWidth, 
+                    RelativeSource={RelativeSource AncestorType=Grid}, 
+                    Converter={StaticResource ButtonSizeConverter}, ConverterParameter='littleButton'}"
+                    HorizontalAlignment="Left" Margin="10"
+                    Click="GameToMenù"/>
+
+        <ToggleButton Grid.Row="2" Content="Audio" Height="30"  Focusable="False"
+                Style="{StaticResource ToggleButtons}"
+                Width="{Binding ActualWidth, 
+                RelativeSource={RelativeSource AncestorType=Grid}, 
+                Converter={StaticResource ButtonSizeConverter}, ConverterParameter='littleButton'}"
+                HorizontalAlignment="Left" Margin="10"
+                IsChecked="{Binding IsAudioOn, Mode=TwoWay}"/>
+
+        <ToggleButton Grid.Row="3" Content="Image" Height="30" Focusable="False"
+                Style="{StaticResource ToggleButtons}"
+                Width="{Binding ActualWidth, 
+                RelativeSource={RelativeSource AncestorType=Grid}, 
+                Converter={StaticResource ButtonSizeConverter}, ConverterParameter='littleButton'}"
+                HorizontalAlignment="Left" Margin="10"
+                IsChecked="{Binding IsImageOn, Mode=TwoWay}"/>
+
+        <ToggleButton Grid.Row="4" Content="Text" Height="30" Focusable="False"
+                Style="{StaticResource ToggleButtons}"
+                Width="{Binding ActualWidth, 
+                RelativeSource={RelativeSource AncestorType=Grid}, 
+                Converter={StaticResource ButtonSizeConverter}, ConverterParameter='littleButton'}"
+                HorizontalAlignment="Left" Margin="10"
+                IsChecked="{Binding IsTextOn, Mode=TwoWay}"/>
+
+
+
+
+        <Image Source="{Binding ImageSource}" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4"
+               Visibility="{Binding ImageVisible}" />
+
+
+        <ProgressBar x:Name="SoundProgressBar" Width="200" Height="20" Margin="5" Minimum="0" Maximum="100" Value="0"
+                     Grid.Column="1" Grid.ColumnSpan="2"
+                     Grid.Row="3" Visibility="{Binding SoundVisible}"/>
+
+
+        <Image x:Name="PauseButton" Grid.Column="2" Grid.Row="4" Source="../Images/pause1.png" HorizontalAlignment="Left" Cursor="Hand"
+MouseLeftButtonDown="pauseButtonPressDown" MouseLeftButtonUp="pauseButtonPressUp" 
+Margin="10,0,0,0" Visibility="{Binding SoundVisible}" />
+
+
+        <Image x:Name="PlayButton" Grid.Column="2" Grid.Row="4" Source="../Images/play1.png" HorizontalAlignment="Left" Cursor="Hand"
+               MouseLeftButtonDown="playButtonPressDown" MouseLeftButtonUp="playButtonPressUp"
+               Margin="10,0,0,0" Visibility="{Binding PlayVisible}"/>
+
+       
+
+
+        <Image x:Name="RefreshButton" Grid.Column="1" Grid.Row="4" Source="../Images/refresh1.png" HorizontalAlignment="Right" Cursor="Hand"
+               MouseLeftButtonDown="RefreshButtonPressDown" MouseLeftButtonUp="ResfreshButtonPressUp" 
+               Margin="0,0,10,0" Visibility="{Binding SoundVisible}"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <TextBlock Grid.Row="0" Grid.Column="3" Grid.RowSpan="2" 
+                   Text="{Binding Debug_text}" 
+                   Foreground="Gainsboro" FontFamily="Tahoma" FontWeight="Bold"
+                   TextWrapping="Wrap" Margin="10" Opacity="0.4"/>
+
+        
+        <Grid Grid.Row="6" Grid.ColumnSpan="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="11*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="6*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="6*"></RowDefinition>
+                <RowDefinition Height="1.5*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="10*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <Image Source="{Binding QuestionImage}"
+            Grid.RowSpan="7" Grid.ColumnSpan="6" Visibility="Visible"  Stretch="Fill"/>
+
+            <Image Source="pack://application:,,,/WWTBM;component/images/Questions/r1.png"
+            Grid.RowSpan="7" Grid.ColumnSpan="6" Visibility="{Binding RedVisible[0]}"  Stretch="Fill"/>
+            <Image Source="pack://application:,,,/WWTBM;component/images/Questions/r2.png"
+            Grid.RowSpan="7" Grid.ColumnSpan="6" Visibility="{Binding RedVisible[1]}"  Stretch="Fill"/>
+            <Image Source="pack://application:,,,/WWTBM;component/images/Questions/r3.png"
+            Grid.RowSpan="7" Grid.ColumnSpan="6" Visibility="{Binding RedVisible[2]}"  Stretch="Fill"/>
+            <Image Source="pack://application:,,,/WWTBM;component/images/Questions/r4.png"
+            Grid.RowSpan="7" Grid.ColumnSpan="6" Visibility="{Binding RedVisible[3]}"  Stretch="Fill"/>
+
+            <TextBlock 
+                Text="{Binding Domanda[0]}" 
+                Visibility="{Binding DomandaVisibili[0]}"
+                Foreground="Gainsboro" 
+                FontFamily="Tahoma" 
+                Grid.Column="1" 
+                Grid.Row="1" 
+                Margin="5"
+                Grid.ColumnSpan="3"
+                TextWrapping="Wrap">
+                <TextBlock.FontSize>
+                    <MultiBinding Converter="{StaticResource MultiParamConverter}">
+                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource AncestorType=Grid}" />
+                        <Binding Path="Domanda[0]" />
+                        <!-- Invia il valore di Domanda[1] come parametro -->
+                        <Binding>
+                            <Binding.Source>
+                                <sys:String>Question</sys:String>
+                            </Binding.Source>
+                        </Binding>
+                    </MultiBinding>
+                </TextBlock.FontSize>
+            </TextBlock>
+
+
+
+
+            <TextBlock 
+    Text="{Binding Domanda[1]}" 
+    Visibility="{Binding DomandaVisibili[1]}"
+    Foreground="Gainsboro" 
+    FontFamily="Tahoma" 
+    Grid.Column="1" 
+    Grid.Row="3" 
+    Margin="0" 
+    TextWrapping="Wrap">
+                <TextBlock.FontSize>
+                    <MultiBinding Converter="{StaticResource MultiParamConverter}">
+                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource AncestorType=Grid}" />
+                        <Binding Path="Domanda[1]" />
+                        <!-- Invia il valore di Domanda[1] come parametro -->
+                        <Binding>
+                            <Binding.Source>
+                                <sys:String>answer</sys:String>
+                            </Binding.Source>
+                        </Binding>
+                    </MultiBinding>
+                </TextBlock.FontSize>
+            </TextBlock>
+
+
+
+            <Button Grid.Column="1" Grid.Row="3" Opacity="0" Command="{Binding Risposta1}" Focusable="False" Cursor="Hand"/>
+
+            <TextBlock 
+                Text="{Binding Domanda[2]}" 
+                Visibility="{Binding DomandaVisibili[2]}"
+                Foreground="Gainsboro" 
+                FontFamily="Tahoma" 
+                Grid.Column="3" 
+                Grid.Row="3" 
+                Margin="0" 
+                TextWrapping="Wrap">
+                <TextBlock.FontSize>
+                    <MultiBinding Converter="{StaticResource MultiParamConverter}">
+                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource AncestorType=Grid}" />
+                        <Binding Path="Domanda[1]" />
+                        <!-- Invia il valore di Domanda[1] come parametro -->
+                        <Binding>
+                            <Binding.Source>
+                                <sys:String>answer</sys:String>
+                            </Binding.Source>
+                        </Binding>
+                    </MultiBinding>
+                </TextBlock.FontSize>
+            </TextBlock>
+
+            <Button Grid.Column="3" Grid.Row="3" Opacity="0" Command="{Binding Risposta2}" Focusable="False" Cursor="Hand"/>
+
+            <TextBlock 
+Text="{Binding Domanda[3]}" 
+Visibility="{Binding DomandaVisibili[3]}"
+Foreground="Gainsboro" 
+FontFamily="Tahoma" 
+Grid.Column="1" 
+Grid.Row="5" 
+Margin="0" 
+TextWrapping="Wrap">
+                <TextBlock.FontSize>
+                    <MultiBinding Converter="{StaticResource MultiParamConverter}">
+                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource AncestorType=Grid}" />
+                        <Binding Path="Domanda[1]" />
+                        <!-- Invia il valore di Domanda[1] come parametro -->
+                        <Binding>
+                            <Binding.Source>
+                                <sys:String>answer</sys:String>
+                            </Binding.Source>
+                        </Binding>
+                    </MultiBinding>
+                </TextBlock.FontSize>
+            </TextBlock>
+
+            <Button Grid.Column="1" Grid.Row="5" Opacity="0" Command="{Binding Risposta3}" Focusable="False" Cursor="Hand"/>
+
+            <TextBlock 
+Text="{Binding Domanda[4]}" 
+Visibility="{Binding DomandaVisibili[4]}"
+Foreground="Gainsboro" 
+FontFamily="Tahoma" 
+Grid.Column="3" 
+Grid.Row="5" 
+Margin="0" 
+TextWrapping="Wrap">
+                <TextBlock.FontSize>
+                    <MultiBinding Converter="{StaticResource MultiParamConverter}">
+                        <Binding Path="ActualWidth" RelativeSource="{RelativeSource AncestorType=Grid}" />
+                        <Binding Path="Domanda[1]" />
+                        <!-- Invia il valore di Domanda[1] come parametro -->
+                        <Binding>
+                            <Binding.Source>
+                                <sys:String>answer</sys:String>
+                            </Binding.Source>
+                        </Binding>
+                    </MultiBinding>
+                </TextBlock.FontSize>
+            </TextBlock>
+
+            <Button Grid.Column="3" Grid.Row="5" Opacity="0" Command="{Binding Risposta4}" Focusable="False" Cursor="Hand"/>
+
+        </Grid>
+    </Grid>
+        
+ 
+</UserControl>
