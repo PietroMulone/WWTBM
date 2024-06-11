@@ -28,7 +28,7 @@ A question file is "new line" sensitive. Every Questions is 6 lines long:
 
 ### Every questions needs a number and a parenthesis
 The number indicates the type of questions
-2-299      normal questions
+1-299      normal questions
 300 - 599  Audio
 600+       Images
 
