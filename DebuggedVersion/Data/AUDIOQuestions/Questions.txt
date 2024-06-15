@@ -4,12 +4,12 @@ Nome del film specifico? +1
 Nome del personaggio nella scena? +2
 -
 1
-302) Nome del film?
-Taken
-Memory
-Un Uomo Sopra la legge
-A Walk Among the Tombstones
-1
+302) Scena epica:
+Attore? +1
+Nome Del Film? +2
+Anno di uscita? +2
+-
+4
 303) Cosa Stiamo Ascoltando?
 V6
 V8
@@ -28,24 +28,24 @@ V16
 - 
 - 
 4
-306) Cosa ha provocato l'ottava (penultima) morte del protagonista di questo film?
-Dei Biscotti
-Una Campana
-Un' Allergia
-Un Cannone
-2
-307) Un film dei migliori..
+306) Film
+- Nome del film? +1
+- 
+- 
+- 
+4
+307) Uno film dei migliori..
 Indipendence Day
 Extinction
 La guerra dei mondi
 Man In Black
 1
-308) Nome del Film?
-Non C'è 2 senza 4
-Altrimenti ci arrabbiamo
-2 Superpiedi quasi piatti
-Nati con la camicia
-2
+308) Film
+- Nome del Film?
+- Nome attori
+- Com'era fatta la Dune Buggy?
+-
+1
 309) Questo è il discorso di ringraziamento per aver ricevuto un oscar (1999) di quale attore?
 Ben Stiller
 Johnny Depp
@@ -70,21 +70,3 @@ Gary Becker
 Paul Samuelson
 Charlie Munger
 4
-313) Quale Cartone animato stiamo Ascoltando?
-Il laboratorio di Dexter
-Le superchicche
-I Due Fantagenitori
-Le tenebrose avventure di Billy e Mandy
-3
-314) Questo è Uno/Il Mostro di quale di questi film/serie? (le clip sono spezzoni diversi)
-Demogorgone di Stranger Things
-Una delle Bestie di The Great wall
-Una delle Bestie di A Quiet Place
-Una delle bestie di Edge of Tomorrow
-4
-315) Questo è Uno/Il Mostro di quale di questi film/serie? (le clip sono spezzoni diversi)
-Demogorgone di Stranger Things
-Una delle Bestie di The Great wall
-Una delle Bestie di A Quiet Place
-Una delle bestie di Edge of Tomorrow
-3

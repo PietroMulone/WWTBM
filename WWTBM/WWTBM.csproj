@@ -132,6 +132,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\Images\easysaves.psd" />
+    <None Include="bin\Debug\WWTBM.exe.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -140,7 +142,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Data\Settings.txt" />
   </ItemGroup>
@@ -195,6 +199,76 @@
     <Content Include="Audio\correct.mp3" />
     <Content Include="Audio\FinalAnswer.mp3" />
     <Content Include="Audio\lose.mp3" />
+    <Content Include="bin\Debug\Audio\302.mp3" />
+    <Content Include="bin\Debug\Audio\bed %281%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %2810%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %282%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %283%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %284%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %285%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %286%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %287%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %288%29.mp3" />
+    <Content Include="bin\Debug\Audio\bed %289%29.mp3" />
+    <Content Include="bin\Debug\Audio\correct.mp3" />
+    <Content Include="bin\Debug\Audio\FinalAnswer.mp3" />
+    <Content Include="bin\Debug\Audio\lose.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\301.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\302.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\303.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\304.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\305.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\306.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\307.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\308.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\309.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\310.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\311.mp3" />
+    <Content Include="bin\Debug\Data\AUDIOQuestions\312.mp3" />
+    <Resource Include="bin\Debug\Data\AUDIOQuestions\mp3 Risposte.txt" />
+    <Resource Include="bin\Debug\Data\AUDIOQuestions\Questions.txt" />
+    <Resource Include="bin\Debug\Data\BlackList.txt" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\601.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\602.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\603.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\604.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\605.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\606.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\607.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\608.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\609.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\610.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\611.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\612.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\613.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\614.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\615.png" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\Questions.txt" />
+    <Resource Include="bin\Debug\Data\IMAGEQuestions\Risposte.txt" />
+    <Resource Include="bin\Debug\Data\Settings.txt" />
+    <Resource Include="bin\Debug\Data\TXTQuestions\Questions.txt" />
+    <Resource Include="bin\Debug\Data\TXTQuestions\spiegazioni.txt" />
+    <Resource Include="bin\Debug\Images\pause1.png" />
+    <Resource Include="bin\Debug\Images\pause2.png" />
+    <Resource Include="bin\Debug\Images\play1.png" />
+    <Resource Include="bin\Debug\Images\play2.png" />
+    <Resource Include="bin\Debug\Images\Questions\g1.png" />
+    <Resource Include="bin\Debug\Images\Questions\g2.png" />
+    <Resource Include="bin\Debug\Images\Questions\g3.png" />
+    <Resource Include="bin\Debug\Images\Questions\g4.png" />
+    <Resource Include="bin\Debug\Images\Questions\questions.png" />
+    <Resource Include="bin\Debug\Images\Questions\r1.png" />
+    <Resource Include="bin\Debug\Images\Questions\r2.png" />
+    <Resource Include="bin\Debug\Images\Questions\r3.png" />
+    <Resource Include="bin\Debug\Images\Questions\r4.png" />
+    <Resource Include="bin\Debug\Images\Questions\v1.png" />
+    <Resource Include="bin\Debug\Images\Questions\v2.png" />
+    <Resource Include="bin\Debug\Images\Questions\v3.png" />
+    <Resource Include="bin\Debug\Images\Questions\v4.png" />
+    <Resource Include="bin\Debug\Images\refresh1.png" />
+    <Resource Include="bin\Debug\Images\refresh2.png" />
+    <Content Include="bin\Debug\WWTBM.exe" />
+    <Content Include="bin\Debug\WWTBM.pdb" />
     <Content Include="Data\AUDIOQuestions\301.mp3" />
     <Content Include="Data\AUDIOQuestions\302.mp3" />
     <Content Include="Data\AUDIOQuestions\303.mp3" />
